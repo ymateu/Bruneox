@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bruneoxx - O dev Scratch</title>
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  text-align:center;
+}
+.card{
+  background:#111827;
+  padding:40px;
+  border-radius:20px;
+  max-width:700px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+}
+h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+.subtitle{
+  opacity:.8;
+  margin-bottom:30px;
+}
+.joke{
+  background:#1f2937;
+  padding:15px;
+  border-radius:10px;
+  margin:10px 0;
+}
+button{
+  margin-top:20px;
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  background:#22c55e;
+  color:#052e16;
+  font-weight:bold;
+}
+button:hover{
+  transform:scale(1.05);
+}
+footer{
+  margin-top:30px;
+  font-size:14px;
+  opacity:.7;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🎉 Feliz Aniversário Brunoxxx 🎉</h1>
+<div class="subtitle">Parabéns para o dev frontend mais sofrido do planeta</div>
+
+<div class="joke">Hoje é seu aniversário, Bruno! Que seu React nunca quebre em produção.</div>
+<div class="joke">Que todos os bugs apareçam só no backend (responsabilidade de outra pessoa - provavelmente Mateus).</div>
+<div class="joke">Que o "funciona no meu celular" continue funcionando</div>
+<div class="joke">Não pegue um SaaS para entregar em 2 meses</div>
+<div class="joke">E principalmente: que o computador tenha React instalado</div>
+
+<button onclick="novaMensagem()">Gerar Mensagem</button>
+
+<div id="mensagem" class="joke" style="margin-top:15px;font-weight:bold;">Clique no botão para gerar uma nova zoeira 👨‍💻</div>
+
+<footer>
+Feito com carinho (e sem testar no Internet Explorer)
+</footer>
+</div>
+
+<script>
+const mensagens = [
+"Bruno, hoje você pode descansar... até aparecer um bug de CSS que só acontece no pc.",
+"Parabéns! Mais um ano sobrevivendo a centralizar div",
+"Que seu flexbox nunca quebre e seu grid sempre alinhe",
+"Seu presente: professor clicker 2",
+"Que Mateus não te mande: 'só muda uma coisinha'",
+"Hoje você não faz deploy... só joga vôlei",
+"Que seu alling-itens sempre funcione de primeira (mentira, nunca funciona)",
+"Parabéns Bruno! Mais um ano brigando com margin que não obedece",
+"Que todos os bugs sejam culpa do backend (Mateus)",
+"Que o cliente nunca peça: 'dá pra deixar igual ao site da Shoppe? (Nexus Reference)'"
+];
+
+function novaMensagem(){
+ const i = Math.floor(Math.random()*mensagens.length);
+ document.getElementById('mensagem').textContent = mensagens[i];
+}
+</script>
+
+</body>
+</html>
